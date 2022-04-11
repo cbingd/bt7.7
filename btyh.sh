@@ -46,16 +46,16 @@ sed -i "/p = threading.Thread(target=check_panel_msg)/, /p.start()/d" /www/serve
 echo "已去除消息推送与文件校验."
 
 
-# rm /www/server/panel/class/ajax.py
-# cd /www/server/panel/class
-# wget https://raw.githubusercontent.com/cbingd/bt7.7/main/ajax.py
-# rm /www/server/panel/task.py
-# cd /www/server/panel
-# wget https://raw.githubusercontent.com/cbingd/bt7.7/main/task.py
-# rm /www/server/panel/tools.py
-# cd /www/server/panel
-# wget https://raw.githubusercontent.com/cbingd/bt7.7/main/tools.py
-# echo "防止升级结束."
+rm /www/server/panel/class/ajax.py
+cd /www/server/panel/class
+wget https://raw.githubusercontent.com/cbingd/bt7.7/main/ajax.py
+rm /www/server/panel/task.py
+cd /www/server/panel
+wget https://raw.githubusercontent.com/cbingd/bt7.7/main/task.py
+#rm /www/server/panel/tools.py
+#cd /www/server/panel
+#wget https://raw.githubusercontent.com/cbingd/bt7.7/main/tools.py
+echo "防止升级结束."
 
 if [ ! -f /www/server/panel/data/not_recommend.pl ]; then
 	echo "True" > /www/server/panel/data/not_recommend.pl
