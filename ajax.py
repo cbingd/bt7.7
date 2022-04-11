@@ -459,6 +459,7 @@ class ajax:
 
     
     def UpdatePanel(self,get):
+        pass
         
 
          
