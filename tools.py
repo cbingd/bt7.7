@@ -610,7 +610,7 @@ def bt_cli(u_input = 0):
         os.system("/etc/init.d/bt default")
     elif u_input == 15:
         ClearSystem()
-    elif u_input == 16:
+    #elif u_input == 16:
         #os.system("curl http://download.bt.cn/install/update6.sh|bash")
     elif u_input == 17:
         l_path = '/www/server/panel/data/log_not_gzip.pl'
