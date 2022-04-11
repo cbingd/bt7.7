@@ -518,7 +518,7 @@ def panel_status():
 
 
 def update_panel():
-
+    pass
 
 def service_panel(action='reload'):
     if not os.path.exists('/www/server/panel/init.sh'):
