@@ -522,7 +522,7 @@ def update_panel():
 
 def service_panel(action='reload'):
     if not os.path.exists('/www/server/panel/init.sh'):
-        #update_panel()
+        update_panel()
     else:
         os.system("bash /www/server/panel/init.sh {} &".format(action))
 
