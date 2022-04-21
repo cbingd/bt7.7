@@ -65,19 +65,19 @@ if [ ! -f /www/server/panel/data/not_workorder.pl ]; then
 fi
 echo "已关闭活动推荐与在线客服."
 
-plugin_file="/www/server/panel/data/plugin.json"
-if [ -f ${plugin_file} ];then
-    chattr -i /www/server/panel/data/plugin.json
-    rm /www/server/panel/data/plugin.json
-    cd /www/server/panel/data
-    wget https://raw.githubusercontent.com/cbingd/bt7.7/main/plugin.json
-    chattr +i /www/server/panel/data/plugin.json
-else
-    cd /www/server/panel/data
-    wget https://raw.githubusercontent.com/cbingd/bt7.7/main/plugin.json
-    chattr +i /www/server/panel/data/plugin.json
-fi
-echo "插件商城开心结束."
+# plugin_file="/www/server/panel/data/plugin.json"
+# if [ -f ${plugin_file} ];then
+#     chattr -i /www/server/panel/data/plugin.json
+#     rm /www/server/panel/data/plugin.json
+#     cd /www/server/panel/data
+#     wget https://raw.githubusercontent.com/cbingd/bt7.7/main/plugin.json
+#     chattr +i /www/server/panel/data/plugin.json
+# else
+#     cd /www/server/panel/data
+#     wget https://raw.githubusercontent.com/cbingd/bt7.7/main/plugin.json
+#     chattr +i /www/server/panel/data/plugin.json
+# fi
+# echo "插件商城开心结束."
 
 repair_file="/www/server/panel/data/repair.json"
 if [ -f ${repair_file} ];then
