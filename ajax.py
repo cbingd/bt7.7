@@ -445,6 +445,7 @@ class ajax:
 
     #获取最新的5条测试版更新日志
     def get_beta_logs(self,get):
+        pass
 
 
     def get_other_info(self):
