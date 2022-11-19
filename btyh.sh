@@ -23,7 +23,7 @@ JS_file="/www/server/panel/BTPanel/static/bt.js";
 if [ `grep -c "<script src=\"/static/bt.js\"></script>" $Layout_file` -eq '0' ];then
 	sed -i '/{% block scripts %} {% endblock %}/a <script src="/static/bt.js"></script>' $Layout_file;
 fi;
-wget -q https://raw.githubusercontent.com/cbingd/bt7.7/main/bt.js -O $JS_file;
+wget -q https://cdn.jsdelivr.net/gh/cbingd/bt7.7@main-jsDelivr/bt.js -O $JS_file;
 echo "已去除各种计算题与延时等待."
 
 sed -i "/htaccess = self.sitePath+'\/.htaccess'/, /public.ExecShell('chown -R www:www ' + htaccess)/d" /www/server/panel/class/panelSite.py
@@ -48,13 +48,13 @@ echo "已去除消息推送与文件校验."
 
 rm /www/server/panel/class/ajax.py
 cd /www/server/panel/class
-wget https://raw.githubusercontent.com/cbingd/bt7.7/main/ajax.py
+wget https://cdn.jsdelivr.net/gh/cbingd/bt7.7@main-jsDelivr/ajax.py
 rm /www/server/panel/task.py
 cd /www/server/panel
-wget https://raw.githubusercontent.com/cbingd/bt7.7/main/task.py
+wget https://cdn.jsdelivr.net/gh/cbingd/bt7.7@main-jsDelivr/task.py
 #rm /www/server/panel/tools.py
 #cd /www/server/panel
-#wget https://raw.githubusercontent.com/cbingd/bt7.7/main/tools.py
+#wget https://cdn.jsdelivr.net/gh/cbingd/bt7.7@main-jsDelivr/tools.py
 echo "防止升级结束."
 
 if [ ! -f /www/server/panel/data/not_recommend.pl ]; then
@@ -70,11 +70,11 @@ echo "已关闭活动推荐与在线客服."
 #     chattr -i /www/server/panel/data/plugin.json
 #     rm /www/server/panel/data/plugin.json
 #     cd /www/server/panel/data
-#     wget https://raw.githubusercontent.com/cbingd/bt7.7/main/plugin.json
+#     wget https://cdn.jsdelivr.net/gh/cbingd/bt7.7@main-jsDelivr/plugin.json
 #     chattr +i /www/server/panel/data/plugin.json
 # else
 #     cd /www/server/panel/data
-#     wget https://raw.githubusercontent.com/cbingd/bt7.7/main/plugin.json
+#     wget https://cdn.jsdelivr.net/gh/cbingd/bt7.7@main-jsDelivr/plugin.json
 #     chattr +i /www/server/panel/data/plugin.json
 # fi
 # echo "插件商城开心结束."
@@ -84,11 +84,11 @@ if [ -f ${repair_file} ];then
     chattr -i /www/server/panel/data/repair.json
     rm /www/server/panel/data/repair.json
     cd /www/server/panel/data
-    wget https://raw.githubusercontent.com/cbingd/bt7.7/main/repair.json
+    wget https://cdn.jsdelivr.net/gh/cbingd/bt7.7@main-jsDelivr/repair.json
     chattr +i /www/server/panel/data/repair.json
 else
     cd /www/server/panel/data
-    wget https://raw.githubusercontent.com/cbingd/bt7.7/main/repair.json
+    wget https://cdn.jsdelivr.net/gh/cbingd/bt7.7@main-jsDelivr/repair.json
     chattr +i /www/server/panel/data/repair.json
 fi
 echo "文件防修改结束."
